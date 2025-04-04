@@ -1,0 +1,5 @@
+venv
+.env
+logs
+sai.jpg
+sai.py

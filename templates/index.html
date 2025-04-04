@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to AI Assistant</h1>
+
+    <div class="container">
+        <h2>Speech to Text</h2>
+        <input type="file" id="audioInput">
+        <button onclick="recognizeSpeech()">Convert to Text</button>
+        <p id="speechOutput"></p>
+
+        <h2>Chatbot</h2>
+        <textarea id="chatInput" placeholder="Type your message..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <p id="chatOutput"></p>
+
+        <h2>Text Summarization</h2>
+        <textarea id="textInput" placeholder="Enter text to summarize..."></textarea>
+        <button onclick="summarizeText()">Summarize</button>
+        <p id="summaryOutput"></p>
+
+        <h2>Generate Image</h2>
+        <input type="text" id="imagePrompt" placeholder="Describe the image...">
+        <button onclick="generateImage()">Generate</button>
+        <img id="generatedImage" style="display:none; max-width:300px;">
+
+        <h2>CLIP Image-Keyword Matching</h2>
+        <input type="file" id="clipImageInput">
+        <input type="text" id="clipKeywords" placeholder="Enter keywords...">
+        <button onclick="findBestMatch()">Find Match</button>
+        <p id="clipOutput" style="font-weight: bold;"></p>
+
+
+        <h2>Image Captioning / Visual Q&A (BLIP)</h2>
+        <input type="file" id="blipImageInput"><br>
+        <input type="text" id="blipPrompt" placeholder="Ask about the image (optional)..."><br>
+        <button onclick="blipProcess()">Get Answer</button>
+        <p id="blipOutput"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+   
+

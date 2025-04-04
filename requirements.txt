@@ -1,0 +1,11 @@
+Flask==3.0.0
+torch==2.1.0
+transformers==4.36.0
+speechrecognition==3.10.0
+openai-whisper==20230918
+Pillow==10.0.1
+numpy==1.26.0
+requests==2.31.0
+huggingface_hub>=0.19.3,<1.0
+gunicorn                                        #for render deployment this apckage is needed
+
